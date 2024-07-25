@@ -1,0 +1,137 @@
+.content.mobile {
+    display: block;
+}
+.content.mobile > .room-group {
+    margin-bottom: 30px;
+}
+.content.mobile > .room-group:last-of-type {
+    margin-bottom: 0;
+}
+.content.large {
+    display: none;
+}
+.content.large > .card.timeline {
+    display: flex;
+}
+
+@media (min-width: 640px) {
+    .content.mobile {
+        display: none;
+    }
+    .content.large {
+        display: block;
+    }
+
+    /* Rooms */
+    .content.large > .card.timeline > .rooms {
+        width: var(--wh-3-12);
+        padding: 0;
+        border-right: 1px solid var(--color-border);
+        background-color: var(--color-white);
+    }
+    .content.large > .card.timeline > .rooms > .items > .item {
+        height: 65px;
+        display: flex;
+        padding: 0 var(--padding-std-compact);
+        align-items: center;
+    }
+    .content.large > .card.timeline > .rooms > .head {
+        width: 100%;
+        height: 60px;
+        padding: 0 var(--padding-std-compact);
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .content.large > .card.timeline > .rooms > .head > .heading {
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+    .content.large > .card.timeline > .rooms > .items > .item:nth-child(even) {
+        background-color: var(--color-base);
+    }
+
+    /* Timeline */
+    .content.large > .card.timeline > .content {
+        width: var(--wh-9-12);
+        padding: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .content.large > .card.timeline > .content > .time-container {
+        display: flex;
+    }
+    .content.large > .card.timeline > .content > .time-container > .time {
+        min-width: 60px;
+        width: 60px;
+        height: 60px;
+        color: var(--color-grey-200);
+        display: flex;
+        font-size: var(--size-14);
+        font-weight: 600;
+        white-space: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        border-bottom: 1px solid var(--color-border);
+    }
+    .content.large > .card.timeline > .content > .rows > .row {
+        height: 65px;
+        display: flex;
+        padding: 0 4px;
+        align-items: center;
+    }
+    .content.large > .card.timeline > .content > .rows > .row > .unit {
+        cursor: default;
+        width: 60px;
+        padding: 3px 4px;
+        font-size: 12px;
+        font-weight: 600;
+        border-left: 2px solid var(--color-white);
+        border-right: 2px solid var(--color-white);
+        background-color: var(--color-grey-100);
+
+        color: var(--color-grey-400);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .content.large > .card.timeline > .content > .rows > .row:nth-child(even) {
+        background-color: var(--color-base);
+    }
+    .content.large > .card.timeline > .content > .rows > .row:nth-child(even) > .unit {
+        border-color: var(--color-base);
+    }
+
+    /* Disabled */
+    .content.large > .card.timeline > .rooms > .items > .item.disabled,
+    .content.large > .card.timeline > .content > .rows > .row.disabled {
+        color: var(--color-red);
+        opacity: 0.5;
+    }
+    .content.large > .card.timeline > .rooms > .items > .item.disabled .subheading {
+        color: var(--color-red);
+        opacity: 0.8;
+    }
+}
+
+@media (min-width: 1440px) {
+    /* Rooms */
+    .content.large > .card.timeline > .rooms {
+        width: 28%;
+    }
+    .content.large > .card.timeline > .rooms > .head {
+        padding: 0 var(--padding-std-padded);
+    }
+    .content.large > .card.timeline > .rooms > .items > .item {
+        padding: 0 var(--padding-std-padded);
+    }
+
+    /* Timeline */
+    .content.large > .card.timeline > .content {
+        width: 72%;
+    }
+    .content.large > .card.timeline > .content > .time-container {
+        padding: 0;
+    }
+}

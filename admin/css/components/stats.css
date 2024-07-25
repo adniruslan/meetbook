@@ -1,0 +1,87 @@
+.stats-container {
+    padding: 0 5px;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-white);
+}
+.stats-container > .wrapper {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+}
+.stats-container > .wrapper::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    height: 0px;
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.stats-container > .wrapper::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+.stats-container > .wrapper > .stats {
+    flex: 1;
+    padding: 12px 10px;
+    background-color: var(--color-white);
+}
+.stats-container > .wrapper > .stats > .label {
+    color: var(--color-grey-300);
+    display: block;
+    font-size: var(--size-12);
+    font-weight: 500;
+    white-space: nowrap;
+    margin-bottom: 2px;
+}
+.stats-container > .wrapper > .stats > .value {
+    display: block;
+    font-size: var(--size-20);
+    font-weight: 700;
+}
+
+@media (min-width: 640px) {
+    .stats-container {
+        padding: 0 var(--padding-x-sm);
+        border-bottom: none;
+        background-color: transparent;
+    }
+    .stats-container > .wrapper {
+        overflow: visible;
+    }
+    .stats-container > .wrapper > .stats {
+        margin: 0 5px;
+        padding: var(--padding-std-compact);
+        box-shadow: var(--shadow-lg);
+        border-radius: var(--rounded-lg);
+    }
+    .stats-container > .wrapper > .stats > .label {
+        font-size: var(--size-14);
+    }
+    .stats-container > .wrapper > .stats > .value {
+        font-size: var(--size-28);
+    }
+    .stats-container > .wrapper > .stats:first-of-type {
+        margin-left: 0;
+    }
+    .stats-container > .wrapper > .stats:last-of-type {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .stats-container {
+        padding: 0 var(--padding-x-lg);
+    }
+}
+
+@media (min-width: 1440px) {
+    .stats-container {
+        padding: 0 var(--padding-x-xl);
+    }
+    .stats-container > .wrapper > .stats {
+        padding: var(--padding-std-padded);
+    }
+    .stats-container > .wrapper > .stats > .label {
+        font-size: var(--size-16);
+    }
+    .stats-container > .wrapper > .stats > .value {
+        font-size: var(--size-32);
+    }
+}

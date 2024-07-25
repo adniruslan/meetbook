@@ -1,0 +1,75 @@
+.calendar > .month {
+    padding-bottom: 15px;
+    font-size: var(--size-16);
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Days of Week (Mon, Tue, etc.) */
+.calendar > .dow {
+    width: 100%;
+    margin: 0 -2px;
+    display: flex;
+    justify-content: space-between;
+}
+.calendar > .dow > div {
+    color: var(--color-grey-200);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--size-12);
+    font-weight: bold;
+    width: 40px;
+    margin: 2px;
+    padding: 3px 0;
+}
+
+/* Days of Month (1, 2, 3, ... 31) */
+.calendar > .dom {
+    width: 100%;
+    margin: 0 -2px;
+}
+.calendar > .dom > .week {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.calendar > .dom > .week > label {
+    width: 40px;
+    height: 40px;
+    margin: 4px 2px;
+    display: flex;
+    font-size: var(--size-16);
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--rounded);
+}
+.calendar > .dom > .week > label.today {
+    color: var(--color-link);
+    font-weight: bold;
+}
+.calendar > .dom > .week > label:not(:empty):hover {
+    cursor: pointer;
+    background-color: var(--color-base);
+}
+.calendar > .dom > .week > input[type="radio"] {
+    top: 0;
+    left: 0;
+    margin-left: -9000px;
+    position: absolute;
+}
+.calendar > .dom > .week > input[type="radio"]:checked + label {
+    transition: none;
+    font-weight: bold;
+    background-color: var(--color-table);
+}
+.calendar > .dom > .week > input[type="radio"]:disabled + label {
+    color: var(--color-grey-100);
+    cursor: default !important;
+    background-color: transparent !important;
+}
+
+@media (min-width: 640px) {
+    .calendar > .dom > .week > label {
+        transition: background-color 0.1s ease-in-out;
+    }
+}

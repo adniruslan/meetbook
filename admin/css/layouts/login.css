@@ -1,0 +1,124 @@
+.ice-breaker {
+    display: none; /* Not displayed on small devices */
+}
+
+.login-form {
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+}
+.login-form > div.content {
+    width: 100%;
+}
+.login-form > div.content > form {
+    width: 100%;
+    display: block;
+}
+.login-form > div.content > .logo {
+    margin: 0 auto 30px;
+}
+.login-form .button {
+    padding: 16px;
+}
+
+.login-form input[type="text"] {
+    padding: 15px;
+}
+.login-form input[type="password"] {
+    padding: 16px 15px 14px;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+.footer a {
+    transition: color 0.1s ease-in-out;
+    text-decoration: none;
+}
+.footer > div.primary {
+    margin-bottom: 5px;
+}
+.footer > div.primary a {
+    color: var(--color-grey-900);
+    font-weight: bold;
+}
+.footer > div.primary a:hover {
+    color: var(--color-grey-400);
+}
+.footer > div.secondary a {
+    color: var(--color-grey-700);
+}
+.footer > div.secondary a:hover {
+    color: var(--color-grey-400);
+}
+
+/* Customize look for tablets and larger devices */
+@media (min-width: 640px) {
+    .login-form > div.content {
+        width: 350px;
+    }
+}
+
+/* Customize look for larger tablets (e.g: iPad Pro, horizontal iPad) */
+@media (min-width: 768px) {
+    /* We don't need to set a new width for `.login-form > div.content` here anymore
+     * because this element inherited width from the previous smaller device's property. */
+}
+
+/* Customize look for larger tablets (e.g: horizontal iPad Pro) */
+@media (min-width: 1024px) {
+    /* We don't need to set a new width for `.login-form > div.content` here anymore
+     * because this element inherited width from the previous smaller device's property. */
+}
+
+/* Customize look for large devices */
+@media (min-width: 1280px) {
+    .global {
+        display: flex;
+    }
+
+    .ice-breaker {
+        width: var(--wh-4-6);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ice-breaker > .content {
+        text-align: center;
+    }
+    .ice-breaker > .content > .illustration {
+        margin-bottom: 10px;
+    }
+    .ice-breaker > .content > h1 {
+        font-size: var(--size-22);
+        margin-bottom: 5px;
+    }
+    .ice-breaker > .content > h2 {
+        color: var(--color-grey-300);
+        font-size: var(--size-16);
+        font-weight: normal;
+    }
+
+    .login-form {
+        width: var(--wh-2-6);
+        padding: 30px;
+    }
+    .login-form > div.content {
+        width: 100%;
+    }
+}
+
+/* Customize look for even larger devices */
+@media (min-width: 1440px) {
+    .ice-breaker {
+        width: var(--wh-9-12);
+    }
+    .login-form {
+        width: var(--wh-3-12);
+    }
+}

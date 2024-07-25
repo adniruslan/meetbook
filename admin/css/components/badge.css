@@ -1,0 +1,33 @@
+span.badge {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: var(--size-12);
+    padding: 6px 9px 5px;
+    color: var(--color-grey-400);
+    border: 1px solid var(--color-border);
+    border-radius: 30px;
+    background-color: var(--color-white);
+}
+span.badge.small {
+    padding: 5px 8px 4px;
+    font-size: var(--size-10);
+}
+span.badge.green {
+    color: var(--color-white);
+    border-color: var(--color-green);
+    background-color: var(--color-green);
+}
+span.badge.red {
+    color: var(--color-white);
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+}
+
+@media (min-width: 1280px) {
+    span.badge {
+        font-size: var(--size-14);
+    }
+    span.badge.small {
+        font-size: var(--size-12);
+    }
+}

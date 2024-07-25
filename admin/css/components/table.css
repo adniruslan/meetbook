@@ -1,0 +1,151 @@
+.card > .table-header,
+.card > .table-footer {
+    color: var(--color-grey-300);
+    display: flex;
+    padding: var(--padding-std-compact);
+    align-items: center;
+    background-color: var(--color-table);
+}
+.card > .table-header {
+    padding-bottom: 20px;
+}
+.card > .table-header.collapses,
+.card > .table-footer.collapses {
+    flex-direction: column;
+}
+.card > .table-header > div:first-of-type,
+.card > .table-footer > div:first-of-type {
+    margin-right: auto;
+}
+.card > .table-header.collapses > div:first-of-type {
+    margin-bottom: 5px;
+}
+.card > .table-header.collapses > div,
+.card > .table-footer.collapses > div {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+}
+.card > .table-footer {
+    font-size: var(--size-14);
+    border-top: 1px solid var(--color-border);
+    padding-bottom: 20px;
+}
+
+.card > .table-container {
+    overflow: auto;
+    border-bottom-left-radius: var(--rounded);
+    border-bottom-right-radius: var(--rounded);
+}
+.card > .table-container > table {
+    width: 200%;
+}
+
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+    border: none;
+    border-spacing: 0;
+}
+
+table {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-white);
+}
+table > thead {
+    background-color: var(--color-table);
+}
+table > thead > tr > th,
+table > tbody > tr > td {
+    padding: 10px var(--padding-std-compact);
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--color-border);
+}
+table > thead > tr > th {
+    color: var(--color-grey-300);
+}
+table > tbody > tr > td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+table > tbody > tr:last-of-type > td {
+    border-bottom: none;
+}
+table > tbody > tr > td.action {
+    text-align: right;
+}
+table > tbody > tr > td.action a {
+    display: inline-block;
+    margin-right: 8px;
+    text-decoration: none;
+}
+table > tbody > tr > td.action a:last-of-type {
+    margin-right: 0;
+}
+table > tbody > tr > td small {
+    color: var(--color-grey-300);
+}
+table > tbody > tr > td.empty {
+    color: var(--color-grey-200);
+    text-align: left;
+}
+table > tbody > tr.red > td,
+table > tbody > tr.red > td small {
+    color: var(--color-red);
+}
+table > tbody > tr.disabled > td {
+    opacity: 0.5;
+    cursor: default;
+}
+table > tbody > tr.disabled > td a {
+    cursor: default;
+}
+
+@media (min-width: 640px) {
+    .card > .table-header,
+    .card > .table-header.collapses {
+        flex-direction: row;
+    }
+    .card > .table-header.collapses > div {
+        margin: 0;
+    }
+    .card > .table-header.collapses > div:first-of-type {
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+    .card > .table-container {
+        border-bottom-left-radius: var(--rounded-lg);
+        border-bottom-right-radius: var(--rounded-lg);
+    }
+    .card > .table-container > table {
+        width: 100%;
+    }
+    .card > .table-footer {
+        font-size: var(--size-14);
+    }
+    table > tbody > tr > td.empty {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card > .table-header,
+    .card > .table-footer {
+        padding: var(--padding-std-padded);
+    }
+    table > thead > tr > th,
+    table > tbody > tr > td {
+        padding-left: var(--padding-std-padded);
+        padding-right: var(--padding-std-padded);
+    }
+    table > thead > tr > th {
+        color: var(--color-grey-300);
+        font-size: var(--size-14);
+        font-weight: 700;
+    }
+}

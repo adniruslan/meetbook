@@ -1,0 +1,38 @@
+.heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.heading:only-child {
+    margin-bottom: 0px;
+}
+.heading > .kicker,
+.heading > .subheading {
+    color: var(--color-grey-300);
+    font-size: 85%;
+    font-weight: normal;
+}
+.heading > .kicker {
+    margin-bottom: 2px;
+}
+.heading > .subheading {
+    margin-top: 2px;
+}
+
+h1.heading {
+    font-size: var(--size-28);
+}
+h2.heading {
+    font-size: var(--size-24);
+}
+h3.heading {
+    font-size: var(--size-20);
+}
+h4.heading {
+    font-size: var(--size-18);
+}
+h5.heading {
+    font-size: var(--size-16);
+}
+h6.heading {
+    font-size: var(--size-14);
+}

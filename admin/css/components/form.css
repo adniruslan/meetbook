@@ -1,0 +1,35 @@
+form > .group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+form > .group:last-of-type {
+    margin-bottom: 0;
+}
+form > .group > div:first-of-type > .heading {
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+
+@media (min-width: 640px) {
+    form > .group {
+        flex-direction: row;
+    }
+    form > .group > div:first-of-type {
+        width: var(--wh-2-6);
+        padding-top: 5px;
+    }
+    form > .group > div:last-of-type {
+        width: var(--wh-4-6);
+    }
+}
+
+@media (min-width: 1280px) {
+    form > .group > div:first-of-type {
+        width: var(--wh-1-4);
+        padding-top: 5px;
+    }
+    form > .group > div:last-of-type {
+        width: var(--wh-3-4);
+    }
+}
