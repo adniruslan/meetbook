@@ -1,0 +1,19 @@
+.card.listing > .table-footer {
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+.card.listing > .table-footer div:first-of-type {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+@media (min-width: 640px) {
+    .card.listing > .table-footer {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .card.listing > .table-footer div:first-of-type {
+        margin-top: 0;
+        text-align: left;
+    }
+}

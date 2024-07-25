@@ -1,0 +1,145 @@
+select,
+textarea,
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    color: var(--color-font);
+    border: 1px solid var(--color-border);
+    padding: 13px;
+    display: block;
+    font-size: var(--size-14);
+    font-family: var(--font-default);
+    background-color: var(--color-white);
+
+    outline-color: var(--color-outline);
+    outline-offset: 0ch;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    -webkit-border-radius: var(--rounded);
+    -moz-border-radius: var(--rounded);
+    border-radius: var(--rounded);
+
+    -webkit-box-shadow: var(--shadow-sm);
+    -moz-box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-sm);
+}
+select::placeholder,
+textarea::placeholder,
+input[type="tel"]::placeholder,
+input[type="url"]::placeholder,
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder {
+    color: var(--color-font-lighter);
+}
+input[type="password"] {
+    padding: 14px 13px 12px; /* Quick hack to align password dots vertically middle */
+}
+
+.select {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.select > i,
+.select > label {
+    right: 13px;
+    color: var(--color-grey-300);
+    position: absolute;
+}
+.select > select {
+    padding-right: 31px;
+}
+
+.field,
+.fields-split .field,
+.fields-split .field:last-of-type {
+    margin-bottom: 20px;
+}
+.field:only-child,
+.field:last-of-type,
+.fields-split:last-of-type .field:last-of-type {
+    margin-bottom: 0;
+}
+.field > label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.field > .guide,
+.field > label > .guide {
+    color: var(--color-grey-200);
+    display: block;
+    font-weight: normal;
+}
+.field > label > .guide {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.field > .guide {
+    margin-top: 5px;
+}
+
+.fields-split {
+    display: block;
+}
+
+.fields-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.fields-row > .field {
+    margin-bottom: 0;
+}
+.fields-row > .field:first-of-type {
+    margin-right: auto;
+}
+.fields-row:last-of-type,
+.fields-row > .field > label,
+.fields-row > .field > label > .guide {
+    margin-bottom: 0;
+}
+label.cursor-pointer {
+    cursor: pointer;
+}
+
+@media (min-width: 640px) {
+    .field > .guide,
+    .field > label > .guide {
+        font-size: var(--size-14);
+    }
+
+    .fields-split {
+        margin: 0 -10px;
+        display: flex;
+    }
+    .fields-split > .field {
+        width: var(--wh-1-2);
+        margin: 0 10px;
+    }
+    .fields-split:last-of-type .field {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    input[type="tel"],
+    input[type="url"],
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        padding: 15px;
+    }
+    input[type="password"] {
+        padding: 16px 15px 14px;
+    }
+}

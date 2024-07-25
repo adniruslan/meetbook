@@ -1,0 +1,265 @@
+.header {
+    width: 100%;
+    padding: 15px var(--padding-x-sm) 10px;
+    z-index: 9;
+    position: relative;
+    font-size: var(--size-14);
+    background-color: var(--color-header);
+}
+
+.header > .menu {
+    display: flex;
+    flex-direction: row;
+}
+.header > .menu > .left,
+.header > .menu > .right,
+.header > .menu > .middle {
+    display: flex;
+    align-items: center;
+}
+.header > .menu > .left {
+    flex: 1;
+}
+.header > .menu > .right {
+    flex: 1;
+    justify-content: flex-end;
+}
+.header > .menu > .middle {
+    flex: 4;
+    justify-content: center;
+}
+.header > .menu > .right > .identity {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--rounded-circular);
+    background-color: var(--color-base);
+}
+.header > .menu > .left > .logo {
+    display: none; /* hide logo in mobile devices */
+}
+
+/* Navigation Menu */
+.header > .menu > .left > nav {
+    display: none;
+    top: 58px;
+    left: 13px;
+    right: 13px;
+    padding: 5px 0;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border-radius: var(--rounded-lg);
+    background-color: var(--color-white);
+}
+.header > .menu > .left > nav.open {
+    display: block;
+}
+.header > .menu > .left > nav > ul {
+    margin: 0;
+    padding: 0;
+}
+.header > .menu > .left > nav > ul > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header > .menu > .left > nav > ul > li a {
+    color: var(--color-grey-500);
+    display: block;
+    padding: 12px 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.header > .menu > .left > nav > ul > li a.active,
+.header > .menu > .left > nav > ul > li a:active {
+    background-color: var(--color-base);
+}
+.header > .menu > .left > nav > ul > li a i {
+    color: var(--color-grey-200);
+    margin-left: 5px;
+}
+
+/* Sub-navigation Menu */
+.header > .menu > .left > nav > ul > li > .submenu > ul {
+    padding: 0;
+    margin: 0 0 0 30px;
+    list-style: none;
+}
+.header > .menu > .left > nav > ul > li > .submenu > ul > li a {
+    padding: 10px;
+    font-size: var(--size-14);
+}
+
+.header > .content {
+    color: var(--color-white);
+    padding: 20px 0 5px;
+}
+.header > .content > h1 {
+    font-size: var(--size-16);
+    font-weight: 700;
+}
+
+/**
+ * Override hamburgers component by Johnathan Suh.
+ * 
+ * @link https://github.com/johnsuh/hamburgers
+ * @author Johnathan Suh <hello@johnsuh.com>
+ * @override Hamburgers Package by Johnathan Suh
+ **/
+.hamburger {
+    padding: 0 !important;
+}
+.hamburger > .hamburger-box {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger > .hamburger-box > .hamburger-inner,
+.hamburger > .hamburger-box > .hamburger-inner::before,
+.hamburger > .hamburger-box > .hamburger-inner::after {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-white) !important;
+}
+.hamburger > .hamburger-box > .hamburger-inner::before {
+    top: -8px;
+}
+.hamburger > .hamburger-box > .hamburger-inner::after {
+    bottom: -8px;
+}
+
+/* Customize look for tablets and larger devices (e.g: iPad) */
+@media (min-width: 640px) {
+    .header {
+        font-size: var(--size-16);
+        padding-top: 10px;
+    }
+    .header > .menu > .middle,
+    .header > .menu > .left > .hamburger {
+        display: none; /* hides hamburger button and middle section */
+    }
+    .header > .menu > .left > .logo {
+        display: block;
+    }
+    .header > .content {
+        padding: 30px 0 10px;
+    }
+    .header > .content > h1 {
+        font-size: var(--size-18);
+    }
+    .header.overlap > .content {
+        padding: 30px 0 60px;
+    }
+
+    /* The main menu is restyled for larger devices */
+    .header > .menu > .left > nav {
+        top: 0;
+        left: 0;
+        display: block;
+        overflow: visible;
+        position: relative;
+        box-shadow: none;
+        padding-left: 25px;
+        background-color: transparent;
+    }
+    .header > .menu > .left > nav > ul {
+        display: flex;
+        position: relative;
+    }
+    .header > .menu > .left > nav > ul > li {
+        padding: 0 4px;
+        z-index: 10;
+    }
+    .header > .menu > .left > nav > ul > li > a {
+        color: var(--color-grey-300);
+        padding: 10px 13px;
+        display: flex;
+        align-items: center;
+        border-radius: var(--rounded-md);
+    }
+    .header > .menu > .left > nav > ul > li > a.active {
+        cursor: default;
+        color: var(--color-white);
+        background-color: var(--color-grey-700);
+    }
+    .header > .menu > .left > nav > ul > li > a.active i {
+        color: var(--color-grey-200);
+    }
+    .header > .menu > .left > nav > ul > li > a:not(.active):active {
+        color: var(--color-grey-500);
+    }
+    .header > .menu > .left > nav > ul > li a:not(.active):active i {
+        color: var(--color-grey-600);
+    }
+    .header > .menu > .left > nav > ul > li > a i {
+        color: var(--color-grey-400);
+    }
+
+    /* Submenu */
+    .header > .menu > .left > nav > ul > li:hover > .submenu {
+        display: block;
+        z-index: 1;
+    }
+    .header > .menu > .left > nav > ul > li:hover > a:not(.active),
+    .header > .menu > .left > nav > ul > li:active > a:not(.active) {
+        background-color: var(--color-grey-900);
+    }
+    .header > .menu > .left > nav > ul > li > .submenu {
+        top: 0;
+        display: none;
+        position: absolute;
+        padding-top: 45px;
+    }
+    .header > .menu > .left > nav > ul > li > .submenu:hover {
+        display: block;
+    }
+    .header > .menu > .left > nav > ul > li > .submenu > ul {
+        width: 200px;
+        overflow: hidden;
+        margin-left: 0;
+        box-shadow: var(--shadow-xl);
+        border-radius: var(--rounded-lg);
+        background-color: var(--color-white);
+    }
+    .header > .menu > .left > nav > ul > li > .submenu > ul > li > a {
+        padding: 15px;
+    }
+    .header > .menu > .left > nav > ul > li > .submenu > ul > li > a:hover {
+        background-color: var(--color-base);
+    }
+    .header > .menu > .left > nav > ul > li > .submenu > ul > li > a:active {
+        filter: brightness(0.99);
+    }
+}
+
+@media (min-width: 1280px) {
+    .header {
+        padding-left: var(--padding-x-lg);
+        padding-right: var(--padding-x-lg);
+    }
+    .header > .content {
+        padding: 40px 0 15px;
+    }
+    .header > .content > h1 {
+        font-size: var(--size-20);
+    }
+    .header.overlap > .content {
+        padding: 40px 0 65px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        padding-left: var(--padding-x-xl);
+        padding-right: var(--padding-x-xl);
+    }
+    .header > .content > h1 {
+        font-size: var(--size-24);
+        font-weight: 500;
+    }
+}

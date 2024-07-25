@@ -1,0 +1,34 @@
+.card.booking > .content > div {
+    display: block;
+}
+.card.booking > .content > div:first-of-type {
+    padding-bottom: 20px;
+}
+.card.booking > .content > div:last-of-type > .field > textarea {
+    height: 150px;
+}
+
+@media (min-width: 640px) {
+    .card.booking > .content {
+        display: flex;
+    }
+    .card.booking > .content > div:first-of-type {
+        width: var(--wh-1-3);
+        padding-right: 10px;
+        padding-bottom: 0;
+    }
+    .card.booking > .content > div:last-of-type {
+        width: var(--wh-2-3);
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    .card.booking > .content > div:last-of-type > .field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .card.booking > .content > div:last-of-type > .field > textarea {
+        flex: 1;
+    }
+}
