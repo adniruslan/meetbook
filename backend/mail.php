@@ -21,13 +21,13 @@ if (isset($_POST["send"])) {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'meetingsbooks@gmail.com';
+    $mail->Username   = 'youremail@gmail.com';
     $mail->Password   = 'iidhpsgntzgsbawd';
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
 
     // Sender email & name
-    $mail->setFrom('meetingsbooks@gmail.com', 'meetbook');
+    $mail->setFrom('youremail@gmail.com', 'meetbook');
 
     // Recipient email
     $mail->addAddress($_POST['email']);
